@@ -1,0 +1,225 @@
+<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tie & Dye Guide</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#00c6ff,#ff416c);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    max-width:850px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    color:white;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+    margin-bottom:10px;
+}
+
+.subtitle{
+    margin-bottom:25px;
+    opacity:0.9;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+button{
+    border:none;
+    padding:12px 25px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.knot{
+    background:#ff9800;
+    color:white;
+}
+
+.crumple{
+    background:#4caf50;
+    color:white;
+}
+
+.spiral{
+    background:#9c27b0;
+    color:white;
+}
+
+.folding{
+    background:#ffc107;
+    color:black;
+}
+
+#output{
+    margin-top:25px;
+    background:rgba(255,255,255,0.2);
+    border-radius:15px;
+    padding:20px;
+    text-align:left;
+    animation:fadeIn .5s;
+}
+
+ol{
+    margin-left:20px;
+    line-height:1.8;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎨 Tie & Dye Technique Guide</h1>
+
+<p class="subtitle">
+Select a technique to learn the steps.
+</p>
+
+<div class="buttons">
+
+    <button class="knot" onclick="showTechnique('knot')">
+        🔵 Knot
+    </button>
+
+    <button class="crumple" onclick="showTechnique('crumple')">
+        🟢 Crumple
+    </button>
+
+    <button class="spiral" onclick="showTechnique('spiral')">
+        🟣 Spiral
+    </button>
+
+    <button class="folding" onclick="showTechnique('folding')">
+        🟡 Folding
+    </button>
+
+</div>
+
+<div id="output">
+    <h2>Welcome!</h2>
+    <p>Select a Tie & Dye technique above.</p>
+</div>
+
+</div>
+
+<script>
+
+function showTechnique(type){
+
+let output = document.getElementById("output");
+
+if(type==="knot"){
+output.innerHTML=`
+<h2>🔵 Knot Technique</h2>
+<ol>
+<li>Spread the fabric flat.</li>
+<li>Tie knots in different areas.</li>
+<li>Secure them tightly with rubber bands.</li>
+<li>Apply different dye colours.</li>
+<li>Leave for 6-8 hours.</li>
+<li>Rinse and dry.</li>
+</ol>
+<p><b>Result:</b> Creates circular and random patterns.</p>
+`;
+}
+
+else if(type==="crumple"){
+output.innerHTML=`
+<h2>🟢 Crumple Technique</h2>
+<ol>
+<li>Lay fabric on a table.</li>
+<li>Crumple it into a loose ball.</li>
+<li>Wrap with rubber bands.</li>
+<li>Add dye randomly.</li>
+<li>Allow dye to set.</li>
+<li>Rinse and dry.</li>
+</ol>
+<p><b>Result:</b> Produces cloudy, marble-like patterns.</p>
+`;
+}
+
+else if(type==="spiral"){
+output.innerHTML=`
+<h2>🟣 Spiral Technique</h2>
+<ol>
+<li>Lay fabric flat.</li>
+<li>Pinch the centre.</li>
+<li>Twist into a spiral shape.</li>
+<li>Secure using rubber bands.</li>
+<li>Apply multiple dye colours.</li>
+<li>Rinse and dry.</li>
+</ol>
+<p><b>Result:</b> Creates colourful spiral designs.</p>
+`;
+}
+
+else if(type==="folding"){
+output.innerHTML=`
+<h2>🟡 Folding Technique</h2>
+<ol>
+<li>Spread the fabric flat on a clean surface.</li>
+<li>Fold it into squares, triangles, or accordion pleats.</li>
+<li>Secure the folds with rubber bands or clips.</li>
+<li>Apply dye to different folded sections.</li>
+<li>Allow the dye to set for 6-8 hours.</li>
+<li>Carefully unfold the fabric.</li>
+<li>Rinse thoroughly and let it dry.</li>
+</ol>
+<p><b>Result:</b> Creates symmetrical geometric patterns.</p>
+`;
+}
+
+}
+
+</script>
+
+</body>
+</html>
